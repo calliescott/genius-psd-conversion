@@ -3,3 +3,42 @@
 .section-news {
     min-height: 1934px;
 }
+
+.news-item {
+    background-color: $newsBackground;
+    min-height: 450px;
+    margin-bottom: 8rem;
+    position: relative;
+    &:hover {
+        box-shadow: 0px 0px 10px 0px rgba(0,0,1,0.25);
+    }
+}
+
+.news-item img {
+    float: left;
+    position: absolute;
+    left: 3rem;
+    top: -3rem;
+}
+
+.news-item figcaption {
+    float: right;
+    width: 45%;
+    min-height: 236px;
+    text-align: left;
+    margin-right: 2rem;
+    margin-top: 7rem;
+    h4 a {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 24px;
+        color: $mainBodyText;
+    }
+    .link-grn a {
+        font-size: 1.4rem;
+        font-weight: 700;
+        line-height: 1.8rem;
+        color: $primary;
+        padding: 3rem;
+    }
+}

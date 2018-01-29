@@ -3,19 +3,105 @@
     min-height: 406px;
 }
 
+.footer-primary .wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.footer-primary-container {
+    padding-top: 7rem;
+    max-width: calc((100% / 4) - 8rem);
+    display: inline-block;
+    margin-right: 8rem;
+}
+
+.footer-primary-container:last-child {
+    margin-right: 0;
+}
+
+.footer-primary-container h3 {
+    text-align: left;
+    font-size: 24px;
+    font-weight: 700px;
+    line-height: 26px;
+}
+
+.footer p, .footer a {
+    font-size: 1.4rem;
+    text-align: left;
+}
+
+.footer-courses-item {
+    display: block;
+    width: 100%;
+    text-align: left;
+    line-height: 3rem;
+    font-weight: 400;
+}
+
+.footer-courses-item:hover::before {
+    content: "\f105";
+    margin-left: 10px;
+}
+
+button, input {
+    padding: 0;
+    margin: 0;
+}
+
+footer button {
+    min-height: 42px;
+}
+
+.fa-facebook-square {
+    color: $facebook;
+}
+
+.fa-twitter-square {
+    color: $twitter;
+}
+
+.fa-google-plus-square {
+    color: $googlePlus;
+}
+
+.fa-instagram {
+    color: $instagram;
+}
+
+.footer-social-link-items {
+    text-align: left;
+}
+.fa-facebook-square, .fa-twitter-square, .fa-google-plus-square, .fa-instagram {
+    font-size: 2.4rem;
+    font-weight: 400;
+    line-height: 48px;
+    text-align: left;
+}
+
+/*BOTTOM FOOTER STYLES*/
 .footer-secondary {
     background-color: $secondaryFooter;
     min-height: 64px;
     max-width: 100%;
+    clear: both;
 }
 
 .nav-footer-secondary {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    float: left;
 }
 
-.nav-footer-secondary ul, .footer-copyright {
+.footer-copyright {
+    float: right;
+    text-align: right;
+}
+
+.nav-footer-secondary, .footer-copyright {
     max-width: 50%;
 }
 

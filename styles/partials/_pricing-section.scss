@@ -4,6 +4,10 @@
     min-height: 1061px;
 }
 
+.section-pricing img {
+    padding-bottom: 10rem;
+}
+
 .pricing-container {
     display: flex;
     flex-direction: row;
@@ -25,10 +29,6 @@
     background-color: $accentColor;
 }
 
-.pricing-heading-txt {
-    padding: 72px 131px 0 131px;
-}
-
 .pricing-circle {
     border-radius: 50%;
     border: 1rem $primary solid;
@@ -38,11 +38,41 @@
     background-color: $secondary;
     left: 0;
     right: 0;
+    margin: 0 auto;
     top: -10%;
 }
 
 .pricing-circle:hover, .pricing-column:hover .pricing-circle {
     box-shadow: 0px 0px 10px 0px rgba(0,0,1,0.25);
+}
+
+.pricing-circle h3 {
+    font-size: 3.8rem;
+    font-weight: 700;
+    line-height: 3.6px;
+}
+
+// .pricing-circle h3::before {
+//     content:'$';
+//     font-size: 2.0rem;
+//     line-height: 2.6px;
+//     padding-right: 20px;
+// }
+
+.pricing-heading-txt {
+    padding: 8rem 0 3rem 0;
+    width: 100%;
+    display: block;
+}
+.pricing-heading-txt h3 {
+    margin: 0;
+}
+
+.pricing-heading-txt p {
+    font-size: 1.4rem;
+    font-weight:300px;
+    line-height: 24px;
+    margin: 0;
 }
 
 .plan-container {
@@ -53,5 +83,20 @@
 }
 
 .plan-item {
-    padding: 0 131px;
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    font-size: 1.4rem;
+    font-weight: 300;
+    color: #444444;
+    padding: 2rem 8rem;
+}
+
+.select-plan h4 a {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #444444;
+    &:hover {
+        color: $primary;
+    }
 }

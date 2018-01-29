@@ -180,11 +180,55 @@ header {
   min-height: 80px;
   position: fixed;
   top: 0;
-  left: 0; }
+  left: 0;
+  z-index: 100;
+  width: 100%; }
+  .header-fixed-primary a {
+    color: #ffffff; }
+    .header-fixed-primary a:hover {
+      color: #86bc42; }
+  .header-fixed-primary .wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
+
+.header-contact, .header-logo, .header-login {
+  display: inline-block;
+  width: 100%;
+  line-height: 48px;
+  padding-top: 15px; }
+
+.header-contact {
+  text-align: left; }
+
+.header-login {
+  text-align: right; }
 
 .header-fixed-secondary {
   background-color: #ffffff;
-  min-height: 70px; }
+  min-height: 70px;
+  z-index: 100;
+  top: 80px;
+  width: 100%;
+  left: 0;
+  position: fixed; }
+  .header-fixed-secondary a {
+    color: #212121;
+    padding: 20px;
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 24px; }
+    .header-fixed-secondary a:hover {
+      color: #86bc42; }
+  .header-fixed-secondary .main-nav {
+    width: 38%; }
 
 .header-full-bleed {
   background-image: url(../images/full-bleed-header.jpg);
@@ -223,17 +267,65 @@ header {
 li.courses-items {
   max-width: calc((100% / 4) - 30px);
   margin-right: 30px;
-  margin-bottom: 30px; }
+  margin-bottom: 30px;
+  clear: both; }
 
 li.courses-items:nth-child(4), li.courses-items:nth-child(8) {
   margin-right: 0; }
 
 .courses-figure img {
   min-height: 180px;
-  max-width: 100%; }
+  max-width: 100%;
+  margin: 0;
+  padding: 0; }
+
+.courses-txt-container {
+  border: 1px #e1e1e1 solid; }
+
+.course-extra-comments {
+  border-top: 1px #e1e1e1 solid;
+  clear: both; }
 
 .course-title {
   text-align: left; }
+  .course-title h4 a {
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 24px;
+    text-align: left;
+    color: #222222;
+    padding-left: 1.8rem; }
+
+.course-author-container {
+  text-align: left; }
+  .course-author-container img {
+    border-radius: 50%;
+    min-height: 42px;
+    margin: 0;
+    padding: 1.8rem; }
+  .course-author-container .course-author-img {
+    float: left; }
+  .course-author-container h5 {
+    margin: 0;
+    padding: 1.8rem 0 0 0; }
+  .course-author-container a {
+    font-size: 1.2rem;
+    font-weight: 300px; }
+
+.course-icons {
+  display: inline-block;
+  float: left;
+  margin-left: 1rem; }
+  .course-icons i, .course-icons p {
+    display: inline-block; }
+
+.course-free {
+  display: inline-block;
+  float: right;
+  margin-right: 1rem; }
+
+.course-free, .course-icons {
+  max-width: calc((100% / 2) - 1rem); }
 
 /*PHOTO GALLERY SECTION STYLES*/
 .section-gallery {
@@ -264,8 +356,14 @@ figcaption.photo-gallery-txt-container {
   position: absolute;
   left: 0;
   right: 0;
-  top: 0;
-  bottom: 0; }
+  top: 50%;
+  bottom: 0;
+  margin: 0 auto; }
+  figcaption.photo-gallery-txt-container a .fa-plus-circle {
+    background-color: #363636;
+    color: #ffffff;
+    min-height: 40px;
+    max-width: 40px; }
 
 li.photo-gallery-item:hover .photo-gallery-txt-container {
   visibility: visible; }
@@ -273,6 +371,40 @@ li.photo-gallery-item:hover .photo-gallery-txt-container {
 /*LATEST NEWS STYLES*/
 .section-news {
   min-height: 1934px; }
+
+.news-item {
+  background-color: #f4f6fa;
+  min-height: 450px;
+  margin-bottom: 8rem;
+  position: relative; }
+  .news-item:hover {
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 1, 0.25);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 1, 0.25); }
+
+.news-item img {
+  float: left;
+  position: absolute;
+  left: 3rem;
+  top: -3rem; }
+
+.news-item figcaption {
+  float: right;
+  width: 45%;
+  min-height: 236px;
+  text-align: left;
+  margin-right: 2rem;
+  margin-top: 7rem; }
+  .news-item figcaption h4 a {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 24px;
+    color: #222222; }
+  .news-item figcaption .link-grn a {
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 1.8rem;
+    color: #ffffff;
+    padding: 3rem; }
 
 /*DIFFERENCES STYLES*/
 .section-differences {
@@ -318,6 +450,9 @@ li.photo-gallery-item:hover .photo-gallery-txt-container {
 .section-pricing {
   min-height: 1061px; }
 
+.section-pricing img {
+  padding-bottom: 10rem; }
+
 .pricing-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -340,9 +475,6 @@ li.photo-gallery-item:hover .photo-gallery-txt-container {
 .pricing-column:hover, .pricing-column:hover .pricing-circle {
   background-color: #86bc42; }
 
-.pricing-heading-txt {
-  padding: 72px 131px 0 131px; }
-
 .pricing-circle {
   border-radius: 50%;
   border: 1rem #ffffff solid;
@@ -352,11 +484,31 @@ li.photo-gallery-item:hover .photo-gallery-txt-container {
   background-color: #f0f2f7;
   left: 0;
   right: 0;
+  margin: 0 auto;
   top: -10%; }
 
 .pricing-circle:hover, .pricing-column:hover .pricing-circle {
   -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 1, 0.25);
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 1, 0.25); }
+
+.pricing-circle h3 {
+  font-size: 3.8rem;
+  font-weight: 700;
+  line-height: 3.6px; }
+
+.pricing-heading-txt {
+  padding: 8rem 0 3rem 0;
+  width: 100%;
+  display: block; }
+
+.pricing-heading-txt h3 {
+  margin: 0; }
+
+.pricing-heading-txt p {
+  font-size: 1.4rem;
+  font-weight: 300px;
+  line-height: 24px;
+  margin: 0; }
 
 .plan-container {
   background-color: #ffffff;
@@ -365,16 +517,102 @@ li.photo-gallery-item:hover .photo-gallery-txt-container {
   margin-right: 1rem; }
 
 .plan-item {
-  padding: 0 131px; }
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: #444444;
+  padding: 2rem 8rem; }
+
+.select-plan h4 a {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #444444; }
+  .select-plan h4 a:hover {
+    color: #ffffff; }
 
 .footer-primary {
   background-color: #252525;
   min-height: 406px; }
 
+.footer-primary .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 100%; }
+
+.footer-primary-container {
+  padding-top: 7rem;
+  max-width: calc((100% / 4) - 8rem);
+  display: inline-block;
+  margin-right: 8rem; }
+
+.footer-primary-container:last-child {
+  margin-right: 0; }
+
+.footer-primary-container h3 {
+  text-align: left;
+  font-size: 24px;
+  font-weight: 700px;
+  line-height: 26px; }
+
+.footer p, .footer a {
+  font-size: 1.4rem;
+  text-align: left; }
+
+.footer-courses-item {
+  display: block;
+  width: 100%;
+  text-align: left;
+  line-height: 3rem;
+  font-weight: 400; }
+
+.footer-courses-item:hover::before {
+  content: "\f105";
+  margin-left: 10px; }
+
+button, input {
+  padding: 0;
+  margin: 0; }
+
+footer button {
+  min-height: 42px; }
+
+.fa-facebook-square {
+  color: #3b5999; }
+
+.fa-twitter-square {
+  color: #00ACE9; }
+
+.fa-google-plus-square {
+  color: #E42730; }
+
+.fa-instagram {
+  color: #874D44; }
+
+.footer-social-link-items {
+  text-align: left; }
+
+.fa-facebook-square, .fa-twitter-square, .fa-google-plus-square, .fa-instagram {
+  font-size: 2.4rem;
+  font-weight: 400;
+  line-height: 48px;
+  text-align: left; }
+
+/*BOTTOM FOOTER STYLES*/
 .footer-secondary {
   background-color: #111111;
   min-height: 64px;
-  max-width: 100%; }
+  max-width: 100%;
+  clear: both; }
 
 .nav-footer-secondary {
   display: -webkit-box;
@@ -386,9 +624,14 @@ li.photo-gallery-item:hover .photo-gallery-txt-container {
   flex-direction: row;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
-  justify-content: space-between; }
+  justify-content: space-between;
+  float: left; }
 
-.nav-footer-secondary ul, .footer-copyright {
+.footer-copyright {
+  float: right;
+  text-align: right; }
+
+.nav-footer-secondary, .footer-copyright {
   max-width: 50%; }
 
 html {
@@ -425,3 +668,6 @@ figure {
 
 .section-lightgrey {
   background-color: #f0f2f7; }
+
+.section-white, .section-lightgrey {
+  padding-top: 10rem; }
