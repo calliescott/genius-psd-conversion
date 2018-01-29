@@ -1,0 +1,57 @@
+/*PRICING STYLES*/
+
+.section-pricing {
+    min-height: 1061px;
+}
+
+.pricing-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.pricing-column {
+    background-color: $secondary;
+    min-height: 594px;
+    max-width: calc((100% / 3) - 3rem);
+    margin-right: 3rem;
+    position: relative;
+}
+
+.pricing-column:last-of-type {
+    margin-right: 0;
+}
+
+.pricing-column:hover, .pricing-column:hover .pricing-circle {
+    background-color: $accentColor;
+}
+
+.pricing-heading-txt {
+    padding: 72px 131px 0 131px;
+}
+
+.pricing-circle {
+    border-radius: 50%;
+    border: 1rem $primary solid;
+    min-height: 120px;
+    width: 120px;
+    position: absolute;
+    background-color: $secondary;
+    left: 0;
+    right: 0;
+    top: -10%;
+}
+
+.pricing-circle:hover, .pricing-column:hover .pricing-circle {
+    box-shadow: 0px 0px 10px 0px rgba(0,0,1,0.25);
+}
+
+.plan-container {
+    background-color: $primary;
+    min-height: 385px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.plan-item {
+    padding: 0 131px;
+}

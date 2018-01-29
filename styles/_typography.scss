@@ -1,2 +1,46 @@
-$type: calc(1.6rem + (3 - 1.6) * ((100vw - 300px) / (1600 - 300)));
 
+
+h1 {
+    font-size: $mainHeadingType;
+    color: $fullBleedFont;
+    margin: 0;
+   
+}
+
+.grn-txt {
+    color: $accentColor;
+}
+
+.uprcase {
+    text-transform: uppercase;
+}
+
+a.grn-txt-hover:hover {
+    color: $accentColor;
+}
+
+.link-grn {
+    background-color: $accentColor;
+    display: inline-block;
+    color: $primary;
+}
+
+h4.uprcase, h2.uprcase {
+    color: $mainBodyText;
+    line-height: 24px;
+}
+
+h4.uprcase {
+    font-weight: 400px;
+    font-size: $sectionPreHeader;
+}
+
+h2.uprcase {
+    font-weight: 700px;
+    font-size: $sectionMainHeader;
+}
+
+
+footer, footer a {
+    color: $primary;
+}

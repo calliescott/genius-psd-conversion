@@ -1,0 +1,40 @@
+/*DIFFERENCES STYLES*/
+.section-differences {
+    min-height: 536px;
+}
+
+.different-section-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+}
+
+.different-item h3 {
+    clear: both;
+}
+
+.different-item h3, .different-item p {
+    text-align: left;
+}
+
+.different-item-circle {
+    background-color: rgba(255,255,255,0.5);
+    border-radius: 50%;
+    width: 207px;
+    height: 207px;
+    float: left;
+    position: absolute;
+}
+
+.concept-before::before {
+    content: url(../images/icon-lightbulb.png);
+}
+
+.experience-before::before {
+    content: url(../images/icon-test-tube.png);
+}
+
+.design-before::before {
+    content: url(../images/icon-ribbon.png);
+}

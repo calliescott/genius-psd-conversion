@@ -1,0 +1,24 @@
+/*COLOUR VARIABLES*/
+
+
+$fixedHeader: #222221; /*dark grey*/
+$accentColor: #86bc42; /*lime green*/
+$primary: #ffffff; /*white*/
+$secondary: #f0f2f7; /*light grey*/
+$primaryNav: #212121;
+$mainBodyText: #222222;
+$fullBleedFont: #242c42;
+$regularIcons: #666666;
+$primaryFooter: #252525;
+$secondaryFooter: #111111;
+
+/*FONTS*/
+$baseFont: 'Raleway', sans-serif;
+$Montserrat: 'Montserrat', sans-serif;
+
+
+
+
+$mainHeadingType: calc(1.6rem + (7.2 - 1.6) * ((100vw - 300px) / (1170 - 300)));
+$sectionPreHeader: calc(1.795rem + (3 - 1.795) * ((100vw - 300px) / (1170 - 300)));
+$sectionMainHeader: calc(3.587rem + (3 - 3.587) * ((100vw - 300px) / (1170 - 300)));

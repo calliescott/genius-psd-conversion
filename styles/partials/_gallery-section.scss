@@ -1,0 +1,37 @@
+/*PHOTO GALLERY SECTION STYLES*/
+
+.section-gallery {
+    min-height: 1008px;
+}
+
+.photo-gallery-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.photo-gallery-item {
+    max-width: calc((100% / 3) - 3rem);
+    margin-right: 3rem;
+    position: relative; 
+    margin-bottom: 3rem;
+}
+
+.photo-gallery-item:nth-child(3), .photo-gallery-item:nth-child(6) {
+    margin-right: 0;
+}
+
+figcaption.photo-gallery-txt-container {
+    visibility: hidden;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+li.photo-gallery-item:hover .photo-gallery-txt-container {
+    visibility: visible;
+}
+
+

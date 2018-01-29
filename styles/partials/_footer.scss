@@ -1,0 +1,22 @@
+.footer-primary {
+    background-color: $primaryFooter;
+    min-height: 406px;
+}
+
+.footer-secondary {
+    background-color: $secondaryFooter;
+    min-height: 64px;
+    max-width: 100%;
+}
+
+.nav-footer-secondary {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.nav-footer-secondary ul, .footer-copyright {
+    max-width: 50%;
+}
+
+
