@@ -139,9 +139,11 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 /*light grey*/
 /*FONTS*/
 h1 {
-  font-size: calc(1.6rem + (7.2 - 1.6) * ((100vw - 300px) / (1170 - 300)));
+  font-size: calc(7.2rem + (7.2 - 1.6) * ((100vw - 300px) / (1170 - 300)));
   color: #242c42;
-  margin: 0; }
+  margin: 0;
+  font-weight: 900;
+  line-height: 8.9rem; }
 
 .grn-txt {
   color: #86bc42; }
