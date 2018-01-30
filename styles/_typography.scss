@@ -3,9 +3,11 @@
 h1 {
     font-size: $mainHeadingType;
     color: $fullBleedFont;
-    margin: 0;
+    margin: 0 auto;
     font-weight: 900;
     line-height: 8.9rem;
+    max-width: 41%;
+    padding-bottom: 2rem;
    
 }
 
@@ -30,16 +32,19 @@ a.grn-txt-hover:hover {
 h4.uprcase, h2.uprcase {
     color: $mainBodyText;
     line-height: 24px;
+    margin: 0;
 }
 
 h4.uprcase {
-    font-weight: 400px;
+    font-weight: 300px;
     font-size: $sectionPreHeader;
 }
 
 h2.uprcase {
     font-weight: 700px;
     font-size: $sectionMainHeader;
+    padding-top: 1rem;
+    padding-bottom: 2.5rem;
 }
 
 

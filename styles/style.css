@@ -141,9 +141,11 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 h1 {
   font-size: calc(7.2rem + (7.2 - 1.6) * ((100vw - 300px) / (1170 - 300)));
   color: #242c42;
-  margin: 0;
+  margin: 0 auto;
   font-weight: 900;
-  line-height: 8.9rem; }
+  line-height: 8.9rem;
+  max-width: 41%;
+  padding-bottom: 2rem; }
 
 .grn-txt {
   color: #86bc42; }
@@ -161,15 +163,18 @@ a.grn-txt-hover:hover {
 
 h4.uprcase, h2.uprcase {
   color: #222222;
-  line-height: 24px; }
+  line-height: 24px;
+  margin: 0; }
 
 h4.uprcase {
-  font-weight: 400px;
+  font-weight: 300px;
   font-size: calc(1.795rem + (3 - 1.795) * ((100vw - 300px) / (1170 - 300))); }
 
 h2.uprcase {
   font-weight: 700px;
-  font-size: calc(3.587rem + (3 - 3.587) * ((100vw - 300px) / (1170 - 300))); }
+  font-size: calc(3.587rem + (3 - 3.587) * ((100vw - 300px) / (1170 - 300)));
+  padding-top: 1rem;
+  padding-bottom: 2.5rem; }
 
 footer, footer a {
   color: #ffffff; }
@@ -186,7 +191,8 @@ header {
   z-index: 100;
   width: 100%; }
   .header-fixed-primary a {
-    color: #ffffff; }
+    color: #ffffff;
+    padding-left: 1rem; }
     .header-fixed-primary a:hover {
       color: #86bc42; }
   .header-fixed-primary .wrapper {
@@ -220,7 +226,9 @@ header {
   top: 80px;
   width: 100%;
   left: 0;
-  position: fixed; }
+  position: fixed;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 1, 0.25);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 1, 0.25); }
   .header-fixed-secondary a {
     color: #212121;
     padding: 20px;
@@ -231,6 +239,9 @@ header {
       color: #86bc42; }
   .header-fixed-secondary .main-nav {
     width: 38%; }
+
+.ul-nav-main {
+  margin-top: 2rem; }
 
 .header-full-bleed {
   background-image: url(../images/full-bleed-header.jpg);
@@ -250,10 +261,31 @@ header {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center; }
+  .header-full-bleed p {
+    max-width: 85%;
+    margin: 0 auto;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 30px;
+    padding-bottom: 5.3rem; }
+  .header-full-bleed a {
+    color: #ffffff;
+    font-size: 1.8rem;
+    font-weight: 700;
+    padding: 20px 36px;
+    line-height: 89px;
+    min-height: 55px;
+    max-width: 25%; }
 
 /*COURSES GALLERY SECTION STYLES*/
 .section-courses {
   min-height: 1250px; }
+
+.nav-secondary {
+  padding-top: 5rem;
+  padding-bottom: 5rem; }
+  .nav-secondary .nav-secondary-links a {
+    padding: 0 10px; }
 
 .courses-gallery-container {
   display: -webkit-box;
@@ -271,6 +303,9 @@ li.courses-items {
   margin-right: 30px;
   margin-bottom: 30px;
   clear: both; }
+  li.courses-items figure {
+    margin: 0;
+    padding: 0; }
 
 li.courses-items:nth-child(4), li.courses-items:nth-child(8) {
   margin-right: 0; }
@@ -290,13 +325,15 @@ li.courses-items:nth-child(4), li.courses-items:nth-child(8) {
 
 .course-title {
   text-align: left; }
+  .course-title h4 {
+    padding: 0 1.8rem;
+    min-height: 7.2rem; }
   .course-title h4 a {
     font-size: 1.8rem;
     font-weight: 700;
     line-height: 24px;
     text-align: left;
-    color: #222222;
-    padding-left: 1.8rem; }
+    color: #222222; }
 
 .course-author-container {
   text-align: left; }
@@ -342,7 +379,8 @@ li.courses-items:nth-child(4), li.courses-items:nth-child(8) {
   -ms-flex-direction: row;
   flex-direction: row;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  padding-top: 6.6rem; }
 
 .photo-gallery-item {
   max-width: calc((100% / 3) - 3rem);
@@ -374,6 +412,9 @@ li.photo-gallery-item:hover .photo-gallery-txt-container {
 .section-news {
   min-height: 1934px; }
 
+.news-container {
+  padding-top: 9.8rem; }
+
 .news-item {
   background-color: #f4f6fa;
   min-height: 450px;
@@ -401,12 +442,19 @@ li.photo-gallery-item:hover .photo-gallery-txt-container {
     font-weight: 700;
     line-height: 24px;
     color: #222222; }
+  .news-item figcaption p {
+    font-size: 1.2rem;
+    line-height: 18px; }
   .news-item figcaption .link-grn a {
     font-size: 1.4rem;
     font-weight: 700;
-    line-height: 1.8rem;
-    color: #ffffff;
-    padding: 3rem; }
+    line-height: 18px;
+    color: #ffffff; }
+  .news-item figcaption .link-grn {
+    min-height: 44px;
+    padding: 1.5rem;
+    position: absolute;
+    bottom: 3rem; }
 
 /*DIFFERENCES STYLES*/
 .section-differences {
@@ -423,7 +471,16 @@ li.photo-gallery-item:hover .photo-gallery-txt-container {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  position: relative;
+  padding-top: 7rem; }
+
+.different-item {
+  max-width: calc((100% / 3) - 3rem);
+  margin-right: 3rem;
   position: relative; }
+
+.different-item:last-child {
+  margin-right: 0; }
 
 .different-item h3 {
   clear: both; }
@@ -436,17 +493,23 @@ li.photo-gallery-item:hover .photo-gallery-txt-container {
   border-radius: 50%;
   width: 207px;
   height: 207px;
+  position: absolute;
+  z-index: 0;
+  top: -30px;
+  left: -20px;
+  margin: 0 auto; }
+
+.different-item img {
+  display: inline-block;
+  max-width: 10%;
   float: left;
-  position: absolute; }
+  margin-top: 20px; }
 
-.concept-before::before {
-  content: url(../images/icon-lightbulb.png); }
-
-.experience-before::before {
-  content: url(../images/icon-test-tube.png); }
-
-.design-before::before {
-  content: url(../images/icon-ribbon.png); }
+.different-item-txt {
+  display: inline-block;
+  max-width: 90%;
+  float: right;
+  z-index: 1; }
 
 /*PRICING STYLES*/
 .section-pricing {
@@ -462,7 +525,8 @@ li.photo-gallery-item:hover .photo-gallery-txt-container {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
   -ms-flex-direction: row;
-  flex-direction: row; }
+  flex-direction: row;
+  padding-top: 2rem; }
 
 .pricing-column {
   background-color: #f0f2f7;
@@ -497,6 +561,9 @@ li.photo-gallery-item:hover .photo-gallery-txt-container {
   font-size: 3.8rem;
   font-weight: 700;
   line-height: 3.6px; }
+
+sup {
+  font-size: 1.6rem; }
 
 .pricing-heading-txt {
   padding: 8rem 0 3rem 0;
@@ -602,6 +669,8 @@ footer button {
 
 .footer-social-link-items {
   text-align: left; }
+  .footer-social-link-items a {
+    padding: 0 10px; }
 
 .fa-facebook-square, .fa-twitter-square, .fa-google-plus-square, .fa-instagram {
   font-size: 2.4rem;

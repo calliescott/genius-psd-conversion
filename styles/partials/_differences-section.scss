@@ -8,6 +8,17 @@
     flex-direction: row;
     justify-content: space-between;
     position: relative;
+    padding-top: 7rem;
+}
+
+.different-item {
+    max-width: calc((100% / 3) - 3rem);
+    margin-right: 3rem;
+    position: relative;
+}
+
+.different-item:last-child {
+    margin-right: 0;
 }
 
 .different-item h3 {
@@ -23,18 +34,27 @@
     border-radius: 50%;
     width: 207px;
     height: 207px;
-    float: left;
     position: absolute;
+    z-index: 0;
+    top: -30px;
+    left: -20px;
+    margin: 0 auto;
 }
 
-.concept-before::before {
-    content: url(../images/icon-lightbulb.png);
+
+.different-item img {
+    display: inline-block;
+    max-width: 10%;
+    float: left;
+    margin-top: 20px;
+    
 }
 
-.experience-before::before {
-    content: url(../images/icon-test-tube.png);
+.different-item-txt {
+    display: inline-block;
+    max-width: 90%;
+    float: right;
+    z-index: 1;
 }
 
-.design-before::before {
-    content: url(../images/icon-ribbon.png);
-}
+

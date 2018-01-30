@@ -12,6 +12,7 @@ header {
     width: 100%;
     a {
         color: $primary;
+        padding-left: 1rem;
         &:hover {
             color: $accentColor;
         }
@@ -48,6 +49,7 @@ header {
     width: 100%;
     left: 0;
     position: fixed;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,1,0.25);
 
     a {
         color: $primaryNav;
@@ -62,11 +64,12 @@ header {
 
     .main-nav {
         width: 38%;
-
     }
-
-
 }
+
+    .ul-nav-main {
+        margin-top: 2rem;
+    }
 
 .header-full-bleed {
     background-image: url(../images/full-bleed-header.jpg);
@@ -77,4 +80,22 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    p {
+        max-width: 85%;
+        margin: 0 auto;
+        font-size: 1.8rem;
+        font-weight: 400;
+        line-height: 30px;
+        padding-bottom: 5.3rem;
+    }
+    a {
+        color: $primary;
+        font-size: 1.8rem;
+        font-weight: 700;
+        padding: 20px 36px;
+        line-height: 89px;
+        min-height: 55px;
+        max-width: 25%;
+    }
 }
+

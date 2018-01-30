@@ -4,6 +4,14 @@
     min-height: 1250px;
 }
 
+.nav-secondary {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    .nav-secondary-links a {
+        padding: 0 10px;
+    }
+}
+
 .courses-gallery-container {
     display: flex;
     flex-direction: row;
@@ -15,7 +23,10 @@ li.courses-items {
     margin-right: 30px;
     margin-bottom: 30px;
     clear: both;
-
+    figure {
+        margin: 0;
+        padding: 0;
+    }
 }
 
 li.courses-items:nth-child(4), li.courses-items:nth-child(8) {
@@ -40,13 +51,16 @@ li.courses-items:nth-child(4), li.courses-items:nth-child(8) {
 
 .course-title {
     text-align: left;
+    h4 {
+        padding: 0 1.8rem;
+        min-height: 7.2rem;
+    }
     h4 a {
         font-size: 1.8rem;
         font-weight: 700;
         line-height: 24px;
         text-align: left;
         color: $mainBodyText;
-        padding-left: 1.8rem;
     }
 }
 

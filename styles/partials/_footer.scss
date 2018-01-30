@@ -73,6 +73,9 @@ footer button {
 
 .footer-social-link-items {
     text-align: left;
+    a {
+        padding: 0 10px;
+    }
 }
 .fa-facebook-square, .fa-twitter-square, .fa-google-plus-square, .fa-instagram {
     font-size: 2.4rem;
