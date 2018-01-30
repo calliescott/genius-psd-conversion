@@ -43,6 +43,10 @@ figure {
     margin: 0;
 }
 
+img {
+    max-width: 100%;
+}
+
 
 .wrapper {
     max-width: 1170px;
@@ -50,7 +54,7 @@ figure {
 }
 
 .section-white {
-    background-color: #primary;
+    background-color: $primary;
 }
 
 .section-lightgrey {
@@ -68,5 +72,34 @@ figure {
 
 
 
+/* Portrait tablet and small desktops */
+@media (max-width: 940px) {
+    .wrapper {
+        max-width: 900px;
+    }
+}
 
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+    .wrapper {
+        max-width: 700px;
+    }
+    .section-lightgrey {
+        background-color: $primary;
+    }
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+    .wrapper {
+        max-width: 400px;
+    }
+}
+
+/*Smallest phone screen @320px wide*/
+@media (max-width: 320px) {
+    .wrapper {
+        max-width: 300px;
+    }
+}
 

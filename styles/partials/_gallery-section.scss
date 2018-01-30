@@ -8,17 +8,22 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-between;
     padding-top: 6.6rem;
+    width: 100%;
 }
 
 .photo-gallery-item {
-    max-width: calc((100% / 3) - 3rem);
-    margin-right: 3rem;
+    max-width: calc((100% / 3) - 2rem);
+    margin-right: 2rem;
     position: relative; 
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
+    &:hover {
+        box-shadow: 0px 0px 10px 0px rgba(0,0,1,0.25);
+    }
 }
 
-.photo-gallery-item:nth-child(3), .photo-gallery-item:nth-child(6) {
+.photo-gallery-item:nth-of-type(3), .photo-gallery-item:last-of-type {
     margin-right: 0;
 }
 
@@ -30,16 +35,52 @@ figcaption.photo-gallery-txt-container {
     top: 50%;
     bottom: 0;
     margin: 0 auto;
-   a .fa-plus-circle{
-       background-color: #363636;
-       color: $primary;
-       min-height: 40px;
-       max-width: 40px;
-   }
 }
+
+.fa-plus-circle {
+    color: #363636;
+    background-color: white;
+    border-radius: 70%;
+    border: 4px solid #b7b7b7;
+}
+
 
 li.photo-gallery-item:hover .photo-gallery-txt-container {
     visibility: visible;
+}
+
+/* When gallery images start to overlap*/
+@media (max-width: 1180px) {
+}
+
+/* Portrait tablet and small desktops */
+@media (max-width: 940px) {
+    .photo-gallery-container {
+        padding: 2rem 5rem;
+    }
+    .photo-gallery-item {
+        max-width: calc((100% / 2) - 1rem);
+        margin-right: 1rem;
+    }
+    .photo-gallery-item:nth-of-type(2), .photo-gallery-item:nth-of-type(4),  .photo-gallery-item:last-of-type {
+        margin-right: 0;
+    }
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+    .photo-gallery-container {
+        margin: 0 auto;
+    }
+
+    .photo-gallery-item {
+        max-width: 100%;
+        margin: 0 0 2rem 0;
+    }
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
 }
 
 

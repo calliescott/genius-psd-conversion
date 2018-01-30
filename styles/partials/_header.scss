@@ -90,12 +90,25 @@ header {
     }
     a {
         color: $primary;
-        font-size: 1.8rem;
+        font-size: 1.6rem;
         font-weight: 700;
-        padding: 20px 36px;
-        line-height: 89px;
+        padding: 1.5rem 3rem;
+        line-height: 55px;
         min-height: 55px;
         max-width: 25%;
     }
 }
 
+
+
+/* Portrait tablet and small desktops */
+@media (max-width: 940px) {
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+}

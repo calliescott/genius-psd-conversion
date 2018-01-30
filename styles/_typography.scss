@@ -5,7 +5,7 @@ h1 {
     color: $fullBleedFont;
     margin: 0 auto;
     font-weight: 900;
-    line-height: 8.9rem;
+    line-height: 7rem;
     max-width: 41%;
     padding-bottom: 2rem;
    
@@ -50,4 +50,17 @@ h2.uprcase {
 
 footer, footer a {
     color: $primary;
+}
+
+
+/* Portrait tablet and small desktops */
+@media (max-width: 940px) {
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
 }

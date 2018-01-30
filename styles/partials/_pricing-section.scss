@@ -11,7 +11,10 @@
 .pricing-container {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     padding-top: 2rem;
+    flex-wrap: wrap;
+    width: 100%;
 }
 
 .pricing-column {
@@ -20,6 +23,7 @@
     max-width: calc((100% / 3) - 3rem);
     margin-right: 3rem;
     position: relative;
+    flex-grow: 1;
 }
 
 .pricing-column:last-of-type {
@@ -96,5 +100,77 @@ sup {
     color: #444444;
     &:hover {
         color: $primary;
+    }
+}
+
+
+
+/* Portrait tablet and small desktops */
+@media (max-width: 941px) {
+    .pricing-container {
+        padding: 2rem;
+    }
+
+    .pricing-column {
+        max-width: calc((100% / 2) - 2rem);
+        margin: 1rem;
+    }
+
+    .pricing-column:nth-last-of-type(2) {
+        margin-right: 0;
+    }
+
+    .pricing-column:last-of-type {
+        margin: 0 auto;
+        margin-top: 8rem;
+    }
+
+     .plan-item {
+        padding: 2rem 2rem;
+    }
+
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+    .pricing-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: space-between;
+    }
+
+    .pricing-column {
+        max-width: calc((100%) - 2rem);
+        margin: 2rem;
+    }
+
+    .pricing-column:last-of-type {
+        margin: 0 auto;
+        margin-top: 8rem;
+    }
+
+   
+}
+
+/* Landscape phones and down */
+@media (max-width: 481px) {
+    .pricing-container {
+        padding: 0;
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+
+    .pricing-column {
+        max-width: calc((100%));
+        margin: 7rem 0 2rem 0;
+    }
+
+    .section-pricing img {
+        padding-bottom: 5rem;
+    }
+
+    .pricing-column:last-of-type {
+        margin: 0 auto;
+        margin-top: 7rem;
     }
 }
