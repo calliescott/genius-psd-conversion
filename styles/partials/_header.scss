@@ -26,17 +26,26 @@ header {
 
 .header-contact, .header-logo, .header-login {
     display: inline-block;
-    width: 100%;
+    width: calc((100% / 3) - 2rem);
     line-height: 48px;
     padding-top: 15px;
+    border: 1px solid yellow;
 }
 
 .header-contact {
     text-align: left;
+    margin-left: 1rem;
+    flex: 0 0 auto;
 }
 
 .header-login {
     text-align: right;
+    margin-right: 1rem;
+    flex: 0 0 auto;
+}
+
+.header-logo {
+    flex: 0 1 auto;
 }
 
 
@@ -103,10 +112,25 @@ header {
 
 /* Portrait tablet and small desktops */
 @media (max-width: 940px) {
+    .header-contact, .header-login {
+        display: flex;
+        flex-direction: column;
+        padding-top: 0;
+        line-height: 20px;
+        align-items: center;
+        justify-content: center;
+    }
 }
 
 /* Landscape phone to portrait tablet */
 @media (max-width: 768px) {
+}
+
+@media (max-width: 525px) {
+    .header-contact, .header-login {
+        line-height: 1.6rem;
+        font-size: 1.2rem;
+    }
 }
 
 /* Landscape phones and down */

@@ -81,6 +81,9 @@ li.photo-gallery-item:hover .photo-gallery-txt-container {
 
 /* Landscape phones and down */
 @media (max-width: 480px) {
+    .photo-gallery-container {
+        padding: 2rem 0;
+    }
 }
 
 

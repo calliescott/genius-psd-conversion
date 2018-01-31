@@ -1,7 +1,6 @@
 .footer-primary {
     background-color: $primaryFooter;
     min-height: 406px;
-    border: 1px magenta solid;
 }
 
 .footer-primary .wrapper {
@@ -9,14 +8,15 @@
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
+    flex-wrap: wrap;
 }
 
 .footer-primary-container {
     padding-top: 7rem;
-    max-width: calc((100% / 4) - 8rem);
+    max-width: calc((100% / 4) - 5rem);
     display: inline-block;
-    margin-right: 8rem;
-    border: 1px magenta solid;
+    margin-right: 5rem;
+    flex-grow: 1;
 }
 
 .footer-primary-container:last-child {
@@ -35,6 +35,26 @@
     text-align: left;
 }
 
+img.footer-logo, .footer-email-form input, .footer-email-form button {
+    text-align: left;
+}
+
+.footer-email-form input {
+    border-radius: 12px;
+    padding-left: 1rem;
+}
+
+.footer-email-form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+img.footer-logo {
+    display: block;
+    margin-top: 24px;
+}
+
 .footer-courses-item {
     display: block;
     width: 100%;
@@ -43,6 +63,33 @@
     font-weight: 400;
 }
 
+.address-txt, .phone-txt, .email-txt {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.fa-map-marker-alt, .contact-phone, .contact-email, .address-txt p, .phone-txt p, .email-txt p {
+    display: inline-block;
+    line-height: 22px;
+    margin: 0;
+    text-align: left;
+    width: 100%;
+}
+
+.fa-map-marker-alt, .contact-phone, .contact-email {
+    width: 10%;
+}
+
+    
+.address-txt p, .phone-txt p, .email-txt p {
+    width: 90%;
+}
+
+.phone-txt p, .email-txt p {
+    padding-left: 1rem;
+}
 
 button, input {
     padding: 0;
@@ -51,6 +98,7 @@ button, input {
 
 footer button {
     min-height: 42px;
+    padding: 0.5rem 1.5rem;
 }
 
 .fa-facebook-square {
@@ -109,16 +157,9 @@ li.checkmark-items {
     display: block;
 }
 
-li.footer-courses-item a::before {
+.fas.fa-angle-right {
     display: none;
-    font-family: "Font Awesome 5 Solid";
-    content: "\f105";
-    background-color: $accentColor;
-    visibility: hidden;
-}
-
-li.footer-courses-item a:hover {
-    padding-left: 10px;
+    padding-right: 1rem;
 }
 
 
@@ -135,6 +176,13 @@ li.footer-courses-item a:hover {
     flex-direction: row;
     justify-content: space-between;
     float: left;
+    margin: 1.4rem 0;
+    ul li a {
+        font-size: 1rem;
+        font-weight: 100;
+        line-height: 24px;
+        padding: 0 0 0 2rem;
+    }
 }
 
 .footer-copyright {
@@ -173,4 +221,18 @@ li.footer-courses-item a:hover {
 
 /* Landscape phones and down */
 @media (max-width: 480px) {
+    .footer-primary {
+        flex-direction: column;
+        padding: 0;
+        justify-content: center;
+        align-items: center;
+    }
+    .footer-primary-container {
+        max-width: 100%;
+        margin: 0;
+        padding-top: 3rem;
+        a img {
+            align: left;
+        }
+    }
 }

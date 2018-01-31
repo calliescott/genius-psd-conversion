@@ -212,15 +212,29 @@ header {
 
 .header-contact, .header-logo, .header-login {
   display: inline-block;
-  width: 100%;
+  width: calc((100% / 3) - 2rem);
   line-height: 48px;
-  padding-top: 15px; }
+  padding-top: 15px;
+  border: 1px solid yellow; }
 
 .header-contact {
-  text-align: left; }
+  text-align: left;
+  margin-left: 1rem;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto; }
 
 .header-login {
-  text-align: right; }
+  text-align: right;
+  margin-right: 1rem;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto; }
+
+.header-logo {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto; }
 
 .header-fixed-secondary {
   background-color: #ffffff;
@@ -281,7 +295,30 @@ header {
     max-width: 25%; }
 
 /* Portrait tablet and small desktops */
+@media (max-width: 940px) {
+  .header-contact, .header-login {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding-top: 0;
+    line-height: 20px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; } }
+
 /* Landscape phone to portrait tablet */
+@media (max-width: 525px) {
+  .header-contact, .header-login {
+    line-height: 1.6rem;
+    font-size: 1.2rem; } }
+
 /* Landscape phones and down */
 /*COURSES GALLERY SECTION STYLES*/
 .section-courses {
@@ -478,6 +515,10 @@ li.photo-gallery-item:hover .photo-gallery-txt-container {
     margin: 0 0 2rem 0; } }
 
 /* Landscape phones and down */
+@media (max-width: 480px) {
+  .photo-gallery-container {
+    padding: 2rem 0; } }
+
 /*LATEST NEWS STYLES*/
 .section-news {
   min-height: 1934px; }
@@ -489,7 +530,8 @@ li.photo-gallery-item:hover .photo-gallery-txt-container {
   background-color: #f4f6fa;
   min-height: 450px;
   margin-bottom: 8rem;
-  position: relative; }
+  position: relative;
+  width: 100%; }
   .news-item:hover {
     -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 1, 0.25);
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 1, 0.25); }
@@ -527,6 +569,31 @@ li.photo-gallery-item:hover .photo-gallery-txt-container {
     bottom: 3rem; }
 
 /* Portrait tablet and small desktops */
+@media (max-width: 940px) {
+  .news-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: space-between;
+    -ms-flex-align: space-between;
+    align-items: space-between; }
+  .news-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    position: none;
+    min-height: 300px; }
+    .news-item img {
+      position: none; } }
+
 /* Landscape phone to portrait tablet */
 /* Landscape phones and down */
 /*DIFFERENCES STYLES*/
@@ -782,8 +849,7 @@ sup {
 
 .footer-primary {
   background-color: #252525;
-  min-height: 406px;
-  border: 1px magenta solid; }
+  min-height: 406px; }
 
 .footer-primary .wrapper {
   display: -webkit-box;
@@ -796,14 +862,18 @@ sup {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  width: 100%; }
+  width: 100%;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
 
 .footer-primary-container {
   padding-top: 7rem;
-  max-width: calc((100% / 4) - 8rem);
+  max-width: calc((100% / 4) - 5rem);
   display: inline-block;
-  margin-right: 8rem;
-  border: 1px magenta solid; }
+  margin-right: 5rem;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1; }
 
 .footer-primary-container:last-child {
   margin-right: 0; }
@@ -818,6 +888,29 @@ sup {
   font-size: 1.4rem;
   text-align: left; }
 
+img.footer-logo, .footer-email-form input, .footer-email-form button {
+  text-align: left; }
+
+.footer-email-form input {
+  border-radius: 12px;
+  padding-left: 1rem; }
+
+.footer-email-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+
+img.footer-logo {
+  display: block;
+  margin-top: 24px; }
+
 .footer-courses-item {
   display: block;
   width: 100%;
@@ -825,12 +918,44 @@ sup {
   line-height: 3rem;
   font-weight: 400; }
 
+.address-txt, .phone-txt, .email-txt {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start; }
+
+.fa-map-marker-alt, .contact-phone, .contact-email, .address-txt p, .phone-txt p, .email-txt p {
+  display: inline-block;
+  line-height: 22px;
+  margin: 0;
+  text-align: left;
+  width: 100%; }
+
+.fa-map-marker-alt, .contact-phone, .contact-email {
+  width: 10%; }
+
+.address-txt p, .phone-txt p, .email-txt p {
+  width: 90%; }
+
+.phone-txt p, .email-txt p {
+  padding-left: 1rem; }
+
 button, input {
   padding: 0;
   margin: 0; }
 
 footer button {
-  min-height: 42px; }
+  min-height: 42px;
+  padding: 0.5rem 1.5rem; }
 
 .fa-facebook-square {
   color: #3b5999; }
@@ -883,15 +1008,9 @@ li.checkmark-items {
   text-align: left;
   display: block; }
 
-li.footer-courses-item a::before {
+.fas.fa-angle-right {
   display: none;
-  font-family: "Font Awesome 5 Solid";
-  content: "\f105";
-  background-color: #86bc42;
-  visibility: hidden; }
-
-li.footer-courses-item a:hover {
-  padding-left: 10px; }
+  padding-right: 1rem; }
 
 /*BOTTOM FOOTER STYLES*/
 .footer-secondary {
@@ -911,7 +1030,13 @@ li.footer-courses-item a:hover {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  float: left; }
+  float: left;
+  margin: 1.4rem 0; }
+  .nav-footer-secondary ul li a {
+    font-size: 1rem;
+    font-weight: 100;
+    line-height: 24px;
+    padding: 0 0 0 2rem; }
 
 .footer-copyright {
   float: right;
@@ -939,6 +1064,26 @@ li.footer-courses-item a:hover {
     margin-right: 2rem; } }
 
 /* Landscape phones and down */
+@media (max-width: 480px) {
+  .footer-primary {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding: 0;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+  .footer-primary-container {
+    max-width: 100%;
+    margin: 0;
+    padding-top: 3rem; }
+    .footer-primary-container a img {
+      align: left; } }
+
 html {
   font-size: 62.5%; }
 
