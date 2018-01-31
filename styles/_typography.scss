@@ -58,9 +58,23 @@ footer, footer a {
 }
 
 /* Landscape phone to portrait tablet */
+@media (max-width: 790px) {
+    h1 {
+    max-width: 100%;
+    }
+}
+/* Landscape phone to portrait tablet */
 @media (max-width: 768px) {
 }
 
 /* Landscape phones and down */
-@media (max-width: 480px) {
+@media (max-width: 481px) {
+    h1 {
+        padding-top: 16rem;
+        padding-bottom: 0;
+    }
+
+    .header-full-bleed .wrapper p {
+        padding-bottom: 0;
+    }
 }

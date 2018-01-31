@@ -29,7 +29,6 @@ header {
     width: calc((100% / 3) - 2rem);
     line-height: 48px;
     padding-top: 15px;
-    border: 1px solid yellow;
 }
 
 .header-contact {
@@ -76,9 +75,35 @@ header {
     }
 }
 
+/*BELOW STYLING IS FOR THE DROP DOWN MENU AS SCREEN SIZE DECREASES*/
     .ul-nav-main {
         margin-top: 2rem;
+        position: relative;
     }
+
+    li.nav-link {
+        display: inline-block;
+        margin-right: 1px;
+    }
+
+    .show-menu {
+        font-family: $baseFont;
+        text-decoration: none;
+        background-color: $primary;
+        color: $mainBodyText;
+        text-align: center;
+        padding-top: 2rem;
+        display: none;
+
+    }
+    input[type=checkbox] {
+        display: none;
+    }
+
+    input[type=checkbox]:checked ~ #menu {
+        display: block;
+    }
+
 
 .header-full-bleed {
     background-image: url(../images/full-bleed-header.jpg);
@@ -122,8 +147,16 @@ header {
     }
 }
 
+/* Make nav on fixed secondary header fit page width*/ 
+@media (max-width: 790px) {
+    .header-fixed-secondary a {
+        padding: 0.5rem;
+    }
+}
+
 /* Landscape phone to portrait tablet */
 @media (max-width: 768px) {
+    
 }
 
 @media (max-width: 525px) {
@@ -131,8 +164,51 @@ header {
         line-height: 1.6rem;
         font-size: 1.2rem;
     }
+
+    .ul-nav-main {
+        position: static;
+        display: none;
+    }
+    li.nav-link {
+        margin-bottom: 1px;
+    }
+
+    ul li, li a {
+        width: 100%;
+    }
+
+    .show-menu {
+        display: block;
+    }
+
+    .header-contact, .header-logo, .header-login {
+        width: calc((100% / 3) - 1rem);
+    }
+
+    .header-contact {
+        margin-right:0.5rem;
+        margin-left: 0;
+        text-align: left;
+    }
+    
+    .header-login {
+        margin-left: 0.5rem;
+        text-align: right;
+        margin-right: 0;
+    }
 }
 
 /* Landscape phones and down */
-@media (max-width: 480px) {
+@media (max-width: 481px) {
+    .header-contact {
+        display: none;
+    }
+
+    .header-logo, .header-login {
+        width: calc((100% / 2));
+    }
+
+    .header-login {
+        margin: 0;
+    }
 }

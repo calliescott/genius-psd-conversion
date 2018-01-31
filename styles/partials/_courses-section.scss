@@ -9,7 +9,7 @@
     padding-bottom: 5rem;
     .nav-secondary-links a {
         padding: 0 1rem;
-        font-color: #222222;
+        color: #222222;
     }
 }
 
@@ -19,6 +19,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     padding-bottom: 5rem;
+    width: 100%;
 }
 
 li.courses-items {
@@ -27,6 +28,7 @@ li.courses-items {
     margin-bottom: 3rem;
     clear: both;
     flex-grow: 1;
+    width: 100%;
      &:hover {
         box-shadow: 0px 0px 10px 0px rgba(0,0,1,0.25);
      }
@@ -48,6 +50,9 @@ li.courses-items:nth-child(4), li.courses-items:nth-child(8) {
     border: 1px #e1e1e1 solid;
 }
 
+img.courses-img {
+    width: 100%;
+}
 
 .courses-txt-container {
     width: 100%;

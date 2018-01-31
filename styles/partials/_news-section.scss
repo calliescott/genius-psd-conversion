@@ -59,12 +59,49 @@
 
 
 /* Portrait tablet and small desktops */
-@media (max-width: 940px) {
+@media (max-width: 941px) {
 
     .news-container {
         display: flex;
         flex-direction: column;
-        align-items: space-between;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .news-item {
+        display: flex;
+        flex-direction: row;
+        position: none;
+        min-height: 300px;
+        max-width: 100%;
+        align-items: center;
+        justify-content: space-between;
+    }
+    img.news-img{
+        float: clear;
+        width: 50%;
+        position: static;
+
+    }
+
+    .news-item figcaption{
+        float: clear;
+        margin-top: 0;
+        margin-bottom: 5rem;
+        .link-grn {
+            min-height: 44px;
+            padding: 1.5rem;
+            position: absolute;
+            bottom: 3rem;
+        }
+    }
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+    .news-container {
+        padding-top: 6rem;
     }
 
     .news-item {
@@ -72,16 +109,64 @@
         flex-direction: column;
         position: none;
         min-height: 300px;
-        img {
-            position: none;
+        max-width: 100%;
+        margin-left: 2rem;
+        margin-right: 2rem;
+        align-items: center;
+        justify-content: space-between;
+        &:hover figcaption.news-txt-container{
+            visibility: visible;
+            opacity: 1;
+        }/*this code layers the course text information on top of the image on hover*/
+    }
+
+    img.news-img{
+        float: clear;
+        width: 100%;
+        position: static;
+        left: 0;
+    }
+
+    figcaption.news-txt-container {
+        float: clear;
+        margin: 0 auto;
+        width: 100%;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        visibility: hidden;
+        background-color: rgba(255,255,255,0.5);
+        opacity: 0;
+        transition: all 0.4s ease;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0 2rem;
+        .link-grn {
+            min-height: 44px;
+            padding: 1.5rem;
+            position: static
         }
     }
 }
 
-/* Landscape phone to portrait tablet */
-@media (max-width: 768px) {
-}
-
 /* Landscape phones and down */
 @media (max-width: 480px) {
+    .news-container {
+        padding-top: 2rem
+    }
+    .news-item {
+        margin-bottom: 2rem;
+        p {
+            margin: 0;
+        }
+    }
+
+    .news-item figcaption{
+        .link-grn {
+            margin-top: 2rem;
+        }
+    }
 }

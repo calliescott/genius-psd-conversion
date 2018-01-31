@@ -37,6 +37,10 @@ figcaption.photo-gallery-txt-container {
     margin: 0 auto;
 }
 
+img.photo-gallery-img {
+    width: 100%;
+}
+
 .fa-plus-circle {
     color: #363636;
     background-color: white;
@@ -54,13 +58,13 @@ li.photo-gallery-item:hover .photo-gallery-txt-container {
 }
 
 /* Portrait tablet and small desktops */
-@media (max-width: 940px) {
+@media (max-width: 941px) {
     .photo-gallery-container {
         padding: 2rem 5rem;
     }
     .photo-gallery-item {
-        max-width: calc((100% / 2) - 1rem);
-        margin-right: 1rem;
+        max-width: calc((100% / 2) - 3rem);
+        margin-right: 3rem;
     }
     .photo-gallery-item:nth-of-type(2), .photo-gallery-item:nth-of-type(4),  .photo-gallery-item:last-of-type {
         margin-right: 0;
@@ -68,9 +72,9 @@ li.photo-gallery-item:hover .photo-gallery-txt-container {
 }
 
 /* Landscape phone to portrait tablet */
-@media (max-width: 768px) {
+@media (max-width: 770px) {
     .photo-gallery-container {
-        margin: 0 auto;
+        // margin: 0 auto;
     }
 
     .photo-gallery-item {

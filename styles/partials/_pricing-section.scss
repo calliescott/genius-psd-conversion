@@ -161,11 +161,12 @@ sup {
     }
 
     .pricing-column {
-        max-width: calc((100%));
+        max-width: calc(100%);
         margin: 7rem 0 2rem 0;
+        margin: 0 auto;
     }
 
-    .section-pricing img {
+    .section-pricing img, .section-pricing {
         padding-bottom: 5rem;
     }
 
