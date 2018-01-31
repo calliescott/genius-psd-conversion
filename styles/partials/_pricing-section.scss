@@ -155,15 +155,14 @@ sup {
 /* Landscape phones and down */
 @media (max-width: 481px) {
     .pricing-container {
-        padding: 0;
-        margin-left: 2rem;
+        padding: 2rem;
+        margin-left: 0;
         margin-right: 2rem;
     }
 
     .pricing-column {
         max-width: calc(100%);
         margin: 7rem 0 2rem 0;
-        margin: 0 auto;
     }
 
     .section-pricing img, .section-pricing {
