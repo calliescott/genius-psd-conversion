@@ -109,7 +109,7 @@
         flex-direction: column;
         position: none;
         min-height: 300px;
-        max-width: 100%;
+        width: calc(100% - 4rem);
         margin-left: 2rem;
         margin-right: 2rem;
         align-items: center;

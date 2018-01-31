@@ -580,6 +580,10 @@ li.photo-gallery-item:hover .photo-gallery-txt-container {
 
 /* Landscape phone to portrait tablet */
 @media (max-width: 770px) {
+  .photo-gallery-container {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
   .photo-gallery-item {
     max-width: 100%;
     margin: 0 0 2rem 0; } }
@@ -700,7 +704,7 @@ li.photo-gallery-item:hover .photo-gallery-txt-container {
     flex-direction: column;
     position: none;
     min-height: 300px;
-    max-width: 100%;
+    width: calc(100% - 4rem);
     margin-left: 2rem;
     margin-right: 2rem;
     -webkit-box-align: center;
@@ -1035,13 +1039,14 @@ sup {
 
 .footer-primary-container {
   padding-top: 7rem;
-  width: calc(100% / 4);
+  margin-right: 1rem;
+  width: calc((100% / 4) - 1rem);
   display: inline-block;
   -webkit-box-flex: 1;
   -ms-flex-positive: 1;
   flex-grow: 1; }
 
-.footer-primary-container:last-child {
+.footer-primary-container:last-of-type {
   margin-right: 0; }
 
 .footer-primary-container h3 {
@@ -1084,6 +1089,12 @@ img.footer-logo {
   text-align: left;
   line-height: 3rem;
   font-weight: 400; }
+  .footer-courses-item svg {
+    visibility: hidden; }
+  .footer-courses-item:hover svg {
+    visibility: visible; }
+  .footer-courses-item:hover a {
+    padding-left: 2rem; }
 
 .address-txt, .phone-txt, .email-txt {
   display: -webkit-box;

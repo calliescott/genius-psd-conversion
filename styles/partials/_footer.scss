@@ -14,12 +14,13 @@
 
 .footer-primary-container {
     padding-top: 7rem;
-    width: calc(100% / 4);
+    margin-right:1rem;
+    width: calc((100% / 4) - 1rem);
     display: inline-block;
     flex-grow: 1;
 }
 
-.footer-primary-container:last-child {
+.footer-primary-container:last-of-type{
     margin-right: 0;
 }
 
@@ -62,6 +63,15 @@ img.footer-logo {
     text-align: left;
     line-height: 3rem;
     font-weight: 400;
+    svg {
+        visibility: hidden;
+    }
+    &:hover svg {
+        visibility: visible;
+    }
+    &:hover a {
+        padding-left: 2rem;
+    }
 }
 
 .address-txt, .phone-txt, .email-txt {
