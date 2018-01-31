@@ -143,9 +143,9 @@ h1 {
   color: #242c42;
   margin: 0 auto;
   font-weight: 900;
-  line-height: 7rem;
-  max-width: 41%;
-  padding-bottom: 2rem; }
+  line-height: 6rem;
+  max-width: 30%;
+  padding-top: 2rem; }
 
 .grn-txt {
   color: #86bc42; }
@@ -309,7 +309,8 @@ input[type=checkbox]:checked ~ #menu {
   justify-content: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
-  align-items: center; }
+  align-items: center;
+  margin-top: 150px; }
   .header-full-bleed p {
     max-width: 85%;
     margin: 0 auto;
@@ -321,8 +322,8 @@ input[type=checkbox]:checked ~ #menu {
     color: #ffffff;
     font-size: 1.6rem;
     font-weight: 700;
-    padding: 1.5rem 3rem;
-    line-height: 55px;
+    padding: 1rem 3rem;
+    line-height: 50px;
     min-height: 55px;
     max-width: 25%; }
 
@@ -691,7 +692,7 @@ li.photo-gallery-item:hover .photo-gallery-txt-container {
       bottom: 3rem; } }
 
 /* Landscape phone to portrait tablet */
-@media (max-width: 768px) {
+@media (max-width: 769px) {
   .news-container {
     padding-top: 6rem; }
   .news-item {
@@ -886,7 +887,7 @@ li.photo-gallery-item:hover .photo-gallery-txt-container {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  padding-top: 2rem;
+  padding-top: 10rem;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   width: 100%; }
@@ -1310,6 +1311,16 @@ img {
 
 .section-white, .section-lightgrey {
   padding-top: 10rem; }
+
+img.open-book-icon {
+  padding: 0 5px; }
+
+.hr-line-grn {
+  display: inline-block;
+  background-color: #86bc42;
+  height: 2px;
+  width: 25px;
+  margin-bottom: 1.2rem; }
 
 /* Portrait tablet and small desktops */
 @media (max-width: 940px) {

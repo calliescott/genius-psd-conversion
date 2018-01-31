@@ -114,6 +114,7 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 150px;
     p {
         max-width: 85%;
         margin: 0 auto;
@@ -126,8 +127,8 @@ header {
         color: $primary;
         font-size: 1.6rem;
         font-weight: 700;
-        padding: 1.5rem 3rem;
-        line-height: 55px;
+        padding: 1rem 3rem;
+        line-height: 50px;
         min-height: 55px;
         max-width: 25%;
     }

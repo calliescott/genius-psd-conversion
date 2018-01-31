@@ -65,9 +65,17 @@ img {
     padding-top: 10rem;
 }
 
+img.open-book-icon {
+    padding: 0 5px;
+}
 
-
-
+.hr-line-grn {
+    display: inline-block;
+    background-color: $accentColor;
+    height: 2px;
+    width: 25px;
+    margin-bottom: 1.2rem;
+}
 
 
 
